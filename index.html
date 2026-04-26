@@ -4,17 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andrea & Estanis · 11 de julio de 2026</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --cream: #f7f3ee;
       --warm: #e8dfd4;
-      --teal: #4a9fa5;
-      --teal-dark: #2d7a80;
-      --teal-light: #7ec8cc;
-      --gold: #c9a96e;
+      --sage: #8a9e8c;
+      --sage-dark: #5c7060;
       --brown: #6b5144;
       --brown-light: #9e7b6a;
+      --gold: #c9a96e;
       --text: #3a2e28;
       --text-light: #7a6a60;
     }
@@ -25,7 +24,7 @@
       background-color: var(--cream);
       color: var(--text);
       font-family: 'Jost', sans-serif;
-      font-weight: 300;
+      font-weight: 400;
       min-height: 100vh;
       overflow-x: hidden;
     }
@@ -47,7 +46,6 @@
       z-index: 1;
     }
 
-    /* ── Header ── */
     .header {
       text-align: center;
       padding-bottom: 56px;
@@ -58,7 +56,7 @@
 
     .invite-label {
       font-size: 10px;
-      font-weight: 400;
+      font-weight: 600;
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--brown-light);
@@ -68,7 +66,7 @@
     .names {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(52px, 12vw, 86px);
-      font-weight: 300;
+      font-weight: 600;
       line-height: 1;
       color: var(--text);
       letter-spacing: -0.01em;
@@ -77,12 +75,11 @@
     .names .ampersand {
       display: block;
       font-style: italic;
-      color: var(--teal);
+      color: var(--gold);
       font-size: 0.65em;
       line-height: 1.4;
     }
 
-    /* ── Botanical divider ── */
     .botanical {
       display: flex;
       align-items: center;
@@ -96,45 +93,46 @@
       flex: 1;
       max-width: 120px;
       height: 1px;
-      background: linear-gradient(to right, transparent, var(--teal-light));
+      background: linear-gradient(to right, transparent, var(--sage));
     }
     .botanical-line.right {
-      background: linear-gradient(to left, transparent, var(--teal-light));
+      background: linear-gradient(to left, transparent, var(--sage));
     }
 
-    /* ── Date block ── */
     .date-block {
       text-align: center;
       animation: fadeUp 1s ease 0.35s both;
     }
 
     .date-day-name {
-      font-size: 10px;
+      font-size: 11px;
+      font-weight: 600;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: var(--teal-dark);
+      color: var(--sage-dark);
       margin-bottom: 4px;
     }
 
     .date-number {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Libre Baskerville', serif;
       font-size: clamp(80px, 20vw, 130px);
-      font-weight: 300;
+      font-weight: 400;
       line-height: 0.9;
       color: var(--text);
       display: block;
+      letter-spacing: 0.1em;
     }
 
     .date-month {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
+      font-weight: 600;
       font-size: clamp(18px, 4vw, 24px);
       color: var(--brown-light);
       display: block;
       margin-top: 6px;
     }
 
-    /* ── Venue ── */
     .venue-block {
       text-align: center;
       margin-top: 48px;
@@ -146,7 +144,7 @@
     .venue-name {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(28px, 6vw, 40px);
-      font-weight: 300;
+      font-weight: 600;
       letter-spacing: 0.02em;
       color: var(--text);
       margin-bottom: 8px;
@@ -154,6 +152,7 @@
 
     .venue-address {
       font-size: 13px;
+      font-weight: 500;
       letter-spacing: 0.05em;
       color: var(--text-light);
       margin-bottom: 20px;
@@ -164,31 +163,30 @@
       align-items: center;
       gap: 7px;
       font-size: 11px;
+      font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--teal-dark);
+      color: var(--sage-dark);
       text-decoration: none;
-      border: 1px solid var(--teal-light);
+      border: 1px solid var(--sage);
       padding: 10px 22px;
       border-radius: 2px;
       transition: all 0.3s ease;
     }
 
     .map-link:hover {
-      background: var(--teal);
+      background: var(--sage);
       color: white;
-      border-color: var(--teal);
     }
 
-    /* ── Programme ── */
     .section {
       margin-top: 64px;
       animation: fadeUp 1s ease 0.55s both;
     }
 
     .section-title {
-      font-size: 10px;
-      font-weight: 400;
+      font-size: 11px;
+      font-weight: 600;
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--brown-light);
@@ -196,10 +194,7 @@
       margin-bottom: 40px;
     }
 
-    .programme {
-      display: flex;
-      flex-direction: column;
-    }
+    .programme { display: flex; flex-direction: column; }
 
     .programme-item {
       display: grid;
@@ -215,9 +210,9 @@
 
     .prog-time {
       font-size: 12px;
+      font-weight: 600;
       letter-spacing: 0.1em;
-      color: var(--teal-dark);
-      font-weight: 400;
+      color: var(--sage-dark);
       padding-top: 2px;
       text-align: right;
     }
@@ -232,7 +227,7 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: var(--teal);
+      background: var(--gold);
       flex-shrink: 0;
       margin-top: 4px;
     }
@@ -249,17 +244,12 @@
     .prog-label {
       font-family: 'Cormorant Garamond', serif;
       font-size: 20px;
-      font-weight: 300;
+      font-weight: 600;
       color: var(--text);
     }
 
-    .prog-emoji {
-      font-size: 16px;
-      padding-top: 3px;
-      opacity: 0.7;
-    }
+    .prog-emoji { font-size: 16px; padding-top: 3px; opacity: 0.7; }
 
-    /* ── RSVP ── */
     .rsvp-block {
       margin-top: 64px;
       text-align: center;
@@ -272,13 +262,14 @@
     .rsvp-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(22px, 5vw, 30px);
-      font-weight: 300;
+      font-weight: 600;
       margin-bottom: 12px;
       color: var(--text);
     }
 
     .rsvp-text {
       font-size: 13px;
+      font-weight: 500;
       color: var(--text-light);
       line-height: 1.7;
       margin-bottom: 28px;
@@ -289,11 +280,11 @@
 
     .rsvp-btn {
       display: inline-block;
-      background: var(--teal-dark);
+      background: var(--sage-dark);
       color: white;
       text-decoration: none;
       font-size: 11px;
-      font-weight: 400;
+      font-weight: 600;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       padding: 16px 36px;
@@ -301,11 +292,8 @@
       transition: background 0.3s ease;
     }
 
-    .rsvp-btn:hover {
-      background: var(--brown);
-    }
+    .rsvp-btn:hover { background: var(--brown); }
 
-    /* ── Photo footer ── */
     .photo-footer {
       margin-top: 64px;
       width: calc(100% + 64px);
@@ -336,12 +324,10 @@
       text-align: center;
       color: rgba(255,255,255,0.85);
       font-size: 11px;
+      font-weight: 500;
       letter-spacing: 0.25em;
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
     }
 
-    /* ── Animations ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -363,11 +349,11 @@
     <div class="botanical">
       <div class="botanical-line"></div>
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M24 8 C24 8, 16 16, 16 24 C16 32, 24 40, 24 40" stroke="#4a9fa5" stroke-width="1" fill="none"/>
-        <path d="M24 8 C24 8, 32 16, 32 24 C32 32, 24 40, 24 40" stroke="#4a9fa5" stroke-width="1" fill="none"/>
-        <path d="M16 18 C16 18, 24 14, 32 18" stroke="#4a9fa5" stroke-width="1" fill="none"/>
-        <path d="M14 26 C14 26, 24 22, 34 26" stroke="#4a9fa5" stroke-width="1" fill="none"/>
-        <circle cx="24" cy="8" r="2" fill="#4a9fa5"/>
+        <path d="M24 8 C24 8, 16 16, 16 24 C16 32, 24 40, 24 40" stroke="#8a9e8c" stroke-width="1" fill="none"/>
+        <path d="M24 8 C24 8, 32 16, 32 24 C32 32, 24 40, 24 40" stroke="#8a9e8c" stroke-width="1" fill="none"/>
+        <path d="M16 18 C16 18, 24 14, 32 18" stroke="#8a9e8c" stroke-width="1" fill="none"/>
+        <path d="M14 26 C14 26, 24 22, 34 26" stroke="#8a9e8c" stroke-width="1" fill="none"/>
+        <circle cx="24" cy="8" r="2" fill="#c9a96e"/>
       </svg>
       <div class="botanical-line right"></div>
     </div>
