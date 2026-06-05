@@ -328,6 +328,172 @@
       letter-spacing: 0.25em;
     }
 
+
+    /* ── Info sections ── */
+    .info-section {
+      margin-top: 64px;
+      animation: fadeUp 1s ease 0.6s both;
+    }
+
+    .coach-block {
+      border: 1px solid var(--warm);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .coach-header {
+      background: var(--warm);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .coach-number {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--brown);
+    }
+
+    .transfer {
+      padding: 20px 24px;
+    }
+
+    .transfer-direction {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sage-dark);
+      margin-bottom: 14px;
+    }
+
+    .transfer-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .transfer-row {
+      display: grid;
+      grid-template-columns: 52px 48px 1fr;
+      gap: 0 12px;
+      align-items: baseline;
+    }
+
+    .t-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .t-time {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .t-place {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-light);
+      line-height: 1.4;
+    }
+
+    .stops {
+      background: var(--cream);
+      border-radius: 3px;
+      padding: 12px 16px;
+      margin-top: 4px;
+    }
+
+    .stops-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sage-dark);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .stop-item {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-light);
+      padding: 4px 0;
+      border-bottom: 1px solid var(--warm);
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+    }
+
+    .stop-item:last-child { border-bottom: none; }
+
+    .stop-time {
+      font-weight: 700;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+
+    .transfer-divider {
+      height: 1px;
+      background: var(--warm);
+      margin: 0 24px;
+    }
+
+    /* ── Gift note ── */
+    .gift-section {
+      margin-bottom: 0;
+    }
+
+    .gift-inner {
+      background: var(--warm);
+      border-radius: 4px;
+      padding: 48px 40px;
+      text-align: center;
+    }
+
+    .gift-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .gift-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(20px, 4vw, 28px);
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .gift-text {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-light);
+      line-height: 1.8;
+      max-width: 480px;
+      margin: 0 auto 16px;
+    }
+
+    .gift-signature {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--brown);
+      margin-top: 32px;
+      display: block;
+      border-top: 1px solid var(--warm);
+      padding-top: 24px;
+    }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -412,13 +578,123 @@
           <span class="prog-label">Fiesta</span>
           <span class="prog-emoji">✨</span>
         </div>
+        <div class="programme-item">
+          <span class="prog-time">03:00</span>
+          <div class="prog-dot-line"><div class="prog-dot"></div><div class="prog-line-v"></div></div>
+          <span class="prog-label">Fin de fiesta y recogida autocar</span>
+          <span class="prog-emoji">🚌</span>
+        </div>
       </div>
     </div>
 
-    <div class="rsvp-block">
-      <h3 class="rsvp-title">Confirmación de asistencia</h3>
-      <p class="rsvp-text">Por favor, confirma tu asistencia a través del formulario antes del 16 de mayo.</p>
-      <a class="rsvp-btn" href="https://forms.gle/DwmhNJov2jXACkmH9" target="_blank">Confirmar asistencia</a>
+
+    <!-- AUTOCAR -->
+    <div class="info-section">
+      <p class="section-title">Información de autocar</p>
+
+      <div class="coach-block">
+        <div class="coach-header">
+          <span class="coach-number">Autocar 01</span>
+        </div>
+
+        <div class="transfer">
+          <div class="transfer-direction">IDA &nbsp;·&nbsp; Barcelona → Òdena</div>
+          <div class="transfer-grid">
+            <div class="transfer-row">
+              <span class="t-label">Salida</span>
+              <span class="t-time">16:00</span>
+              <span class="t-place">Zona Bus · Passeig d'Andreu Nin, 15 · Barcelona</span>
+            </div>
+            <div class="transfer-row">
+              <span class="t-label">Llegada</span>
+              <span class="t-time">17:30</span>
+              <span class="t-place">Can Macià · Òdena</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="transfer-divider"></div>
+
+        <div class="transfer">
+          <div class="transfer-direction">REGRESO &nbsp;·&nbsp; Òdena → Barcelona</div>
+          <div class="transfer-grid">
+            <div class="transfer-row">
+              <span class="t-label">Salida</span>
+              <span class="t-time">03:00</span>
+              <span class="t-place">Can Macià · Òdena</span>
+            </div>
+            <div class="transfer-row">
+              <span class="t-label">Llegada</span>
+              <span class="t-time">04:30</span>
+              <span class="t-place">Zona Bus · Passeig d'Andreu Nin, 15 · Barcelona</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="coach-block">
+        <div class="coach-header">
+          <span class="coach-number">Autocar 02</span>
+        </div>
+
+        <div class="transfer">
+          <div class="transfer-direction">IDA &nbsp;·&nbsp; El Bruc · Pobla de Claramunt → Òdena</div>
+          <div class="transfer-grid">
+            <div class="transfer-row">
+              <span class="t-label">Salida</span>
+              <span class="t-time">16:45</span>
+              <span class="t-place">El Bruc + Pobla de Claramunt</span>
+            </div>
+            <div class="transfer-row">
+              <span class="t-label">Llegada</span>
+              <span class="t-time">17:30</span>
+              <span class="t-place">Can Macià · Òdena</span>
+            </div>
+          </div>
+          <div class="stops">
+            <span class="stops-label">Recogidas</span>
+            <div class="stop-item"><span class="stop-time">16:45</span> Hotel El Bruc</div>
+            <div class="stop-item"><span class="stop-time">17:15</span> Avinguda Pompeu Fabra, 1 · Pobla de Claramunt</div>
+          </div>
+        </div>
+
+        <div class="transfer-divider"></div>
+
+        <div class="transfer">
+          <div class="transfer-direction">REGRESO &nbsp;·&nbsp; Òdena → Pobla de Claramunt · El Bruc</div>
+          <div class="transfer-grid">
+            <div class="transfer-row">
+              <span class="t-label">Salida</span>
+              <span class="t-time">03:00</span>
+              <span class="t-place">Can Macià · Òdena</span>
+            </div>
+            <div class="transfer-row">
+              <span class="t-label">Llegada</span>
+              <span class="t-time">04:00</span>
+              <span class="t-place">Pobla de Claramunt + El Bruc</span>
+            </div>
+          </div>
+          <div class="stops">
+            <span class="stops-label">Paradas</span>
+            <div class="stop-item">Avinguda Pompeu Fabra, 1 · Pobla de Claramunt</div>
+            <div class="stop-item">Hotel El Bruc</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTA REGALOS -->
+    <div class="info-section gift-section">
+      <div class="gift-inner">
+        <div class="gift-icon">🤍</div>
+        <h3 class="gift-title">Regalos</h3>
+        <p class="gift-text">
+          Ya nos han preguntado varias veces cómo queremos nuestro regalo de bodas. Hasta hemos conocido que se llama la espiga jajaja. Pues bien, como ya sabéis, queremos reiterar que vuestra presencia en este día es, sin duda, el regalo más grande que podéis hacernos.
+        </p>
+        <p class="gift-text">
+          Si aun así queréis tener un detalle con nosotros, el día de la boda habrá una caja donde podréis dejarlo con todo vuestro cariño. Pero por favor, que esto no sea una preocupación: especialmente para quienes habéis recorrido un largo camino para estar aquí.
+        </p>
+      </div>
     </div>
 
     <div class="photo-footer">
